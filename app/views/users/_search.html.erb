@@ -1,0 +1,33 @@
+<!-- = search_form_for(@q, url:search_path) do |f|
+  p
+    = f.label :department_id_eq, '学部'
+    = f.collection_radio_buttons :department_id_eq, @departments, :id, :name
+  = f.submit -->
+
+  <div class="field">
+  <span class="book_category">好きな本のジャンルは？？</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :category, :小説, checked: "checked" %>
+    <%= f.label :小説, class: "category_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :category, :ノンフィクション %>
+    <%= f.label :ノンフィクション, class: "category_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :category, :料理 %>
+    <%= f.label :料理, class: "category_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :category, :健康 %>
+    <%= f.label :健康, class: "category_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :category, :漫画 %>
+    <%= f.label :漫画, class: "category_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :category, :その他 %>
+    <%= f.label :その他, class: "category_label" %>
+  </div>
+</div>

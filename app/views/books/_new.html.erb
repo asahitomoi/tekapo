@@ -1,0 +1,26 @@
+<%= form_for(book) do |f| %>
+
+<h1>New book</h1>
+
+<label>Title</label>
+<div>
+  <%= f.text_field :title, class:"book_title col-xs-12", placeholder:"title"%>
+</div>
+
+<label><%= f.radio_button :category,"小説" %>小説</label>
+<label><%= f.radio_button :category, "ノンフィクション" %>ノンフィクション</label>
+<label><%= f.radio_button :category, "料理" %>料理</label>
+<label><%= f.radio_button :category, "健康" %>健康</label>
+<label><%= f.radio_button :category, "漫画" %>漫画</label>
+<label><%= f.radio_button :category, "その他" %>その他</label>
+
+<%#= f.select :category, {'小説' =>1 , 'ノンフィクション' =>2, 'カテゴリ３' => 3} %>
+
+<label>Opinion</label>
+<div>
+  <%= f.text_area :body,class:"book_body col-xs-12",placeholder:"inpressions,emotions"%>
+</div>
+<div>
+ <%= f.submit"Create Book",class:"btn btn-primary col-xs-12"%>
+</div>
+<% end %>

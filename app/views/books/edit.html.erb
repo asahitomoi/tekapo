@@ -1,0 +1,21 @@
+<div class=container>
+<h1>Editing Book</h1>
+
+<%= form_for(@book)do |f| %>
+  <div>
+   <label>Title</label>
+  </div>
+  <div>
+   <%= f.text_field :title ,autofocus:true, placeholder:"title"%>
+  </div>
+  <div>
+   <label>opinion</label>
+  </div>
+  <div>
+   <%= f.text_area :body, placeholder:"opinion 〜200文字"%>
+  </div>
+  <div>
+   <%= f.submit "Update Book" %>
+  </div>
+<% end %>
+</div>
