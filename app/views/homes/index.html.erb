@@ -1,0 +1,55 @@
+<div class="container">
+ <div class="text-white">
+ <div class="row">
+ <h3 class="cart-title">カート</h3>
+
+ <table class="table table-hover table-bordered">
+	<thead>
+		<tr>
+			<th></th>
+			<th>商品名</th>
+			<th>アーティスト名</th>
+			<th>単価</th>
+			<th>数量</th>
+			<th>金額（税込)</th>
+			<th></th>
+		</tr>
+	</thead>
+	
+    
+	<tbody>
+		<td>ジャケット画像</td>
+		<td>キセキ</td>
+		<td>GReeeeN</td>
+		<td>1,919円</td>
+		<td>
+            <select class="form-control col-md-6">
+            <option value="1" selected="selected">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            </select>
+            </div>
+　　　　　</td>
+		<td>1.919円</td>
+		<td>
+			<span class="form-inline">
+				<%= link_to "削除", carts_index_path, method: :delete,"data-confirm" => "カートから削除しますか？", class: "btn-sm btn-danger" %>
+			</span>
+		</td>
+	</tbody>
+ </table>
+ </div>
+	
+    
+ <div class="row">
+ <div class="col-md-9">
+	<%= link_to "お買い物を続ける", root_path, class: "btn-lg btn-primary" %>
+ </div>
+ <div class="col-md-3">
+	<%= link_to "次に進む", root_path, class: "btn-lg btn-success" %>
+ </div>
+</div>
+</div>
+ </div>

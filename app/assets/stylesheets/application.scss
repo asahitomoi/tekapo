@@ -1,0 +1,71 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+div.image1 {
+/*.image1だけだとbackground-positionが効かなかったけど、divで指定するとさらに強力な指定になるから適応されることがある */
+background-image: url(stars.jpg);
+background-position: bottom;
+background-size: cover;
+}
+.image2 {
+background-image: url(lake.jpg);
+}
+.image3 {
+background-image: url(lupin.jpg);
+}
+.image4 {
+background-image: url(nuts.jpg);
+}
+.image5 {
+background-image: url(milford.jpg);
+}
+
+#container{
+  height: 600px;
+}
+
+.titlehome{
+	width: 100%;
+	position: absolute;
+	top: 285px;
+	color: white;
+	z-index: 999;
+}s
+
+
+.titlehome h1{
+	text-align: center;
+
+}
+
+.subtitle{
+	width: 100%;
+	position: absolute;
+	top: 350px;
+	color: white;
+	z-index: 999;
+}
+
+.subtitle h4{
+	text-align: center;
+}
+
+body{
+	margin-top: 55px;
+}

@@ -1,0 +1,47 @@
+<div id="container">
+   <!-- <div class ="main"> -->
+    <div id="theTarget">
+      <div class="image1"></div>
+      <div class="image2"></div>
+      <div class="image3"></div>
+      <div class="image4"></div>
+      <div class="image5"></div>
+    </div>
+    <div class="titlehome"><h1>Welcome to TEKAPO</h1></div>
+    <div class="subtitle">
+    	<h4>Love the life you live<br>
+    	    Live the life you love</h4>
+    </div>
+    <!-- divで箱を作って箱を上下で動かしてそのあとh2で左右を動かすイメージ -->
+
+</div>
+
+
+<!-- application.jsに貼ってたら、indexとか他のところからhomeに飛ぶときに画像が読み込まなかったけど、↓みたいにhtmlに直接入れると読み込みが早くなって？しっかりと画像を読み込むことができる。書く場所変えるのあり！ -->
+<script>
+
+	$(document).ready(function () {
+  $("#theTarget").skippr({
+      // スライドショーの変化 ("fade" or "slide")
+      transition : 'slide',
+      // 変化に係る時間(ミリ秒)
+      speed : 1000,
+      // easingの種類
+      easing : 'easeOutQuart',
+      // ナビゲーションの形("block" or "bubble")
+      navType : 'block',
+      // 子要素の種類("div" or "img")
+      childrenElementType : 'div',
+      // ナビゲーション矢印の表示(trueで表示)
+      arrows : true,
+      // スライドショーの自動再生(falseで自動再生なし)
+      autoPlay : true,
+      // 自動再生時のスライド切替間隔(ミリ秒)
+      autoPlayDuration : 3000,
+      // キーボードの矢印キーによるスライド送りの設定(trueで有効)
+      keyboardOnAlways : true,
+      // 一枚目のスライド表示時に戻る矢印を表示するかどうか(falseで非表示)
+      hidePrevious : false
+  });
+});
+</script>
